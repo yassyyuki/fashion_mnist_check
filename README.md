@@ -13,13 +13,49 @@ pip install tensorflow
 pip install tensorflowjs
 ```
 
-Train the model and save the trained model.
+### Train a model
+
+Train a model and save the trained model.
 
 ```sh
-python train.py
+$ python train.py
+(snip)
+
+Test accuracy: 0.8709999918937683
+
+Predictions for zero input
+[0.08157011 0.00318779 0.02768737 0.05093732 0.00741246 0.71254516
+ 0.07637644 0.02599602 0.01260033 0.00168701]
+
+Model was saved.
 ```
 
 You will have the following files.
 
 * model.data-00000-of-00001
 * model.index
+
+### Export the trained model
+
+Load the trained model and export it for TensorFlow.js.
+
+```sh
+$ python export.py
+(snip)
+
+Predictions for zero input
+[0.08157011 0.00318779 0.02768737 0.05093732 0.00741246 0.71254516
+ 0.07637644 0.02599602 0.01260033 0.00168701]
+
+Model was exported.
+```
+
+You can verify that the model was loaded correctly by checking that you get the same output for the zero input.
+
+Then you will have the following directory which contains the exported model for TensorFlow.js.
+
+```txt
+model
+├── group1-shard1of1.bin
+└── model.json
+```

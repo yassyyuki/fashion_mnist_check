@@ -31,10 +31,17 @@ model = create_model()
 
 model.fit(train_images, train_labels, epochs=5)
 
-test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
-print('\nTest accuracy:', test_acc)
-predictions = model.predict(test_images)
+test_loss, test_acc = model.evaluate(test_images, test_labels)
 
+print('\n')
+print('Test accuracy: {}\n'.format(test_acc))
+
+test_input = np.zeros(28 * 28).reshape((1, 28, 28))
+predictions = model.predict(test_input)
+
+print('Predictions for zero input')
 print(predictions[0])
 
 model.save_weights('model')
+print()
+print('Model was saved.')
