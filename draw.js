@@ -33,7 +33,7 @@ function drawSetup(canvas, canvas2, canvas3) {
 function draw(x, y, canvas) {
   var context = canvas.getContext('2d');
   context.strokeStyle = "white";
-  var w = 40;
+  var w = 20;
   context.lineWidth = w;
   context.lineCap = "round";
   context.lineJoin = "round";
