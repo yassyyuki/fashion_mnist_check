@@ -9,8 +9,10 @@ Sample codes to train some model with TensorFlow (Keras), to export the trained 
 You need TensorFlow and TensorFlow.js. If you do not have them yet, install them as follows.
 
 ```sh
-pip install tensorflow
-pip install tensorflowjs
+python3 -m venv tf  
+source tf/bin/activate
+python3 -m pip install --upgrade pip
+python3 -m pip install tensorflow tensorflowjs
 ```
 
 ### Train a model
@@ -18,7 +20,7 @@ pip install tensorflowjs
 Train a model and save the trained model.
 
 ```sh
-$ python train.py
+$ python3 train.py
 (snip)
 
 Test accuracy: 0.8709999918937683
@@ -40,7 +42,7 @@ You will have the following files.
 Load the trained model and export it for TensorFlow.js.
 
 ```sh
-$ python export.py
+$ python3 export.py
 (snip)
 
 Predictions for zero input
