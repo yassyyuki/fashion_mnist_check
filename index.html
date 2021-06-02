@@ -47,7 +47,7 @@
   <script>
     var model;
     window.onload = async function () {
-      drawSetup($('canvas'), $('canvas2'), $('canvas3'));
+      drawSetup($('canvas'), $('canvas2')));
       model = await tf.loadLayersModel('./model/model.json');
     }
 

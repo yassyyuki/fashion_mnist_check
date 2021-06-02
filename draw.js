@@ -1,7 +1,7 @@
 prevX = 0;
 prevY = 0;
 mouseDown = false;
-function drawSetup(canvas, canvas2, canvas3) {
+function drawSetup(canvas, canvas2) {
   canvas.onmousedown = function (e) {
     var r = canvas.getBoundingClientRect();
     prevX = e.clientX - r.left;
